@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">NUMAD21Su-OsmanSubasi</string>
     <string name="about_string">About</string>
+    <string name="info_text" />
+    <string name="name_string">Osman Subasi</string>
+    <string name="email_string">subasi.o@northeastern.edu</string>
 </resources>
