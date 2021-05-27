@@ -11,4 +11,5 @@
     <string name="btnB">B</string>
     <string name="btnA">A</string>
     <string name="btnD">D</string>
+    <string name="pressText">Pressed:</string>
 </resources>

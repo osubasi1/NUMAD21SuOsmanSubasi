@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         pressMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Press me clicked");
 
                 Intent activityToIntent = new Intent(getApplicationContext(), PressMeActivity.class);
                 startActivity(activityToIntent);

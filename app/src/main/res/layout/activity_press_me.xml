@@ -7,72 +7,88 @@
     tools:context=".PressMeActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
+        android:onClick="onClick"
         android:text="@string/btnA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="50dp"
+        android:onClick="onClick"
         android:text="@string/btnB"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/btnE"
+        app:layout_constraintEnd_toStartOf="@+id/btnC"
         app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btnA"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.50" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
+        android:onClick="onClick"
         android:text="@string/btnC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:onClick="onClick"
+        android:text="@string/btnD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
+        android:onClick="onClick"
         android:text="@string/btnE"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/btnF"
         app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnD"
+        app:layout_constraintTop_toBottomOf="@+id/btnB" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/btnD"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
+        android:onClick="onClick"
         android:text="@string/btnF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btnC" />
+
+    <TextView
+        android:id="@+id/pressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/pressText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
