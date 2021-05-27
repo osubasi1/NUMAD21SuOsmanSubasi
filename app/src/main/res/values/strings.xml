@@ -4,4 +4,11 @@
     <string name="info_text" />
     <string name="name_string">Osman Subasi</string>
     <string name="email_string">subasi.o@northeastern.edu</string>
+    <string name="newActivityBtn">Press Me</string>
+    <string name="btnF">F</string>
+    <string name="btnE">E</string>
+    <string name="btnC">C</string>
+    <string name="btnB">B</string>
+    <string name="btnA">A</string>
+    <string name="btnD">D</string>
 </resources>
