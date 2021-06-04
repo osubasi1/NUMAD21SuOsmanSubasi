@@ -36,6 +36,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Week 3
+        Button linkCollector = findViewById(R.id.linkCollector);
+        linkCollector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent linkCollectorIntent = new Intent(getApplicationContext(),
+                        LinkCollectorActivity.class);
+                startActivity(linkCollectorIntent);
+            }
+        });
+
     }
 
 

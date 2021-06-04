@@ -12,4 +12,14 @@
     <string name="btnA">A</string>
     <string name="btnD">D</string>
     <string name="pressText">Pressed:</string>
+    <string name="linkCollector">Link Collector</string>
+    <string name="add_item">add item</string>
+    <string name="item_name">Item name</string>
+    <string name="item_description">Description</string>
+    <string name="description">This image acts as an icon.</string>
+    <string name="infoTextUserInput">You are about add a link to your list</string>
+    <string name="urlName">Name</string>
+    <string name="url">URL</string>
+    <string name="linkAddBtn">Add</string>
+
 </resources>
