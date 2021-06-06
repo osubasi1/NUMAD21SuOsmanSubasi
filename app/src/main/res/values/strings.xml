@@ -21,5 +21,7 @@
     <string name="urlName">Name</string>
     <string name="url">URL</string>
     <string name="linkAddBtn">Add</string>
+    <string name="name_placeholder">Name</string>
+    <string name="url_placeholder">URL</string>
 
 </resources>

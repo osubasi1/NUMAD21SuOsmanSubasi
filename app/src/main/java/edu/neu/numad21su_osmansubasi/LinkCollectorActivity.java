@@ -75,12 +75,9 @@ public class LinkCollectorActivity extends AppCompatActivity {
         int size = linkList == null ? 0 : linkList.size();
         outState.putInt(NUMBER_OF_ITEMS, size);
 
-        // Need to generate unique key for each item
-        // This is only a possible way to do, please find your own way to generate the key
+
         for (int i = 0; i < size; i++) {
-            // put linkName information into instance
             outState.putString(KEY_OF_INSTANCE + i + "0", linkList.get(i).getLinkName());
-            // put url information into instance
             outState.putString(KEY_OF_INSTANCE + i + "1", linkList.get(i).getLinkUrl());
         }
         super.onSaveInstanceState(outState);
@@ -136,7 +133,7 @@ public class LinkCollectorActivity extends AppCompatActivity {
 
     private String httpsCheck( String url){
         if (!url.startsWith("http://") || !url.startsWith("https://"))
-            url = "http://" + url;
+            url = "https://" + url;
         return url;
     }
     private Boolean tldCheck (String url) {

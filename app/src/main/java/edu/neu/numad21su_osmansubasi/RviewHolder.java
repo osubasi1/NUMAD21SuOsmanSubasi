@@ -7,22 +7,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RviewHolder  extends RecyclerView.ViewHolder {
 
-    public TextView displayedText;
+    public TextView name;
     public TextView url;
 
 
-    public RviewHolder(View itemView, final LinkClickListener link) {
+    public RviewHolder(View itemView, final LinkClickListener listener) {
         super(itemView);
-        displayedText = itemView.findViewById(R.id.link_collector_item);
-        url = itemView.findViewById(R.id.urlInput);
-
+        name = itemView.findViewById(R.id.link_name);
+        url = itemView.findViewById(R.id.link_url);
+        System.out.println("url is: " + url);
         itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (link != null){
+                if (listener != null){
                     int position = getLayoutPosition();
                     if(position != RecyclerView.NO_POSITION){
-                        link.onItemClick(url.getText().toString());
+                        listener.onItemClick(url.getText().toString());
                     }
                 }
             }

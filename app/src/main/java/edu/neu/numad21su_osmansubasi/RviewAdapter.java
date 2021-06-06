@@ -14,10 +14,12 @@ public class RviewAdapter extends RecyclerView.Adapter<RviewHolder>{
     private LinkClickListener listener;
 
     public RviewAdapter(ArrayList<LinkCard> linkList) {
+
         this.linkList = linkList;
     }
 
     public void setOnItemClickListener (LinkClickListener listener){
+
         this.listener = listener;
     }
 
@@ -28,12 +30,11 @@ public class RviewAdapter extends RecyclerView.Adapter<RviewHolder>{
     }
 
 
-
-
     @Override
     public void onBindViewHolder(RviewHolder holder, int position) {
         LinkCard currentItem = linkList.get(position);
-        holder.displayedText.setText(currentItem.getLinkName());
+        holder.name.setText(currentItem.getLinkName());
+        holder.url.setText(currentItem.getLinkUrl());
 
     }
 
