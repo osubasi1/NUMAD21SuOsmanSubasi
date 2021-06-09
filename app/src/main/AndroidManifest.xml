@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_os_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD21SuOsmanSubasi">
-        <activity android:name=".LinkCollectorActivity"></activity>
+        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".LinkCollectorActivity" />
         <activity android:name=".PressMeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

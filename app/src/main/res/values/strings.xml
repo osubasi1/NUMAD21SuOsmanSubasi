@@ -23,5 +23,6 @@
     <string name="linkAddBtn">Add</string>
     <string name="name_placeholder">Name</string>
     <string name="url_placeholder">URL</string>
+    <string name="deviceLocation">Device Location</string>
 
 </resources>

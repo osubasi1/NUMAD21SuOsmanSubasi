@@ -43,11 +43,9 @@
         android:id="@+id/pressMeBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="176dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
         android:text="@string/newActivityBtn"
-        app:layout_constraintEnd_toStartOf="@+id/about_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,10 +53,20 @@
         android:id="@+id/linkCollector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:text="@string/linkCollector"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pressMeBtn" />
+
+    <Button
+        android:id="@+id/locationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/deviceLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkCollector" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

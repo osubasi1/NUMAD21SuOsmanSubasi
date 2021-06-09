@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Week 3
+        // Week 4
         Button linkCollector = findViewById(R.id.linkCollector);
         linkCollector.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +45,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent linkCollectorIntent = new Intent(getApplicationContext(),
                         LinkCollectorActivity.class);
                 startActivity(linkCollectorIntent);
+            }
+        });
+
+        // Week 5 - Sensors
+        Button locationBtn = findViewById(R.id.locationBtn);
+        locationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent locationIntent = new Intent(getApplicationContext(),
+                       LocationActivity.class);
+                startActivity(locationIntent);
             }
         });
 
