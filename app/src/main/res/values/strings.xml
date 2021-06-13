@@ -24,5 +24,9 @@
     <string name="name_placeholder">Name</string>
     <string name="url_placeholder">URL</string>
     <string name="deviceLocation">Device Location</string>
+    <string name="latitudeText">latitude</string>
+    <string name="longitudeText">longitude</string>
+    <string name="longLabel">Logitude:</string>
+    <string name="latLabel">Latitude:</string>
 
 </resources>
