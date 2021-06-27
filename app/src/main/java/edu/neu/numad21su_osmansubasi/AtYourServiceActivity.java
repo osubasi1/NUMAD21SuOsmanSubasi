@@ -24,8 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AtYourServiceActivity extends AppCompatActivity  {
-
+public class AtYourServiceActivity extends AppCompatActivity {
 
 
     final static String nowPlaying = "https://api.themoviedb.org/3/movie/now_playing?api_key=eea1a7fc0d5c72b36736e248dc5e2693&language=en-US";
@@ -35,9 +34,9 @@ public class AtYourServiceActivity extends AppCompatActivity  {
 
     private JSONArray jsonData;
     private JSONObject jObject;
+
     private RecyclerView mRecyclerView;
     private List<Object> viewItems = new ArrayList<>();
-
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
 
@@ -67,20 +66,16 @@ public class AtYourServiceActivity extends AppCompatActivity  {
                         choice = upComing;
                         break;
                 }
-
-
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 //
             }
         });
-
-
     }
 
-
-    private void createRecyclerView(){
+    private void createRecyclerView() {
 
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
@@ -93,17 +88,20 @@ public class AtYourServiceActivity extends AppCompatActivity  {
         mAdapter = new RecyclerAdapterMovie(this, viewItems);
         mRecyclerView.setAdapter(mAdapter);
     }
+
     private void addItemsFromJSON(JSONObject jObject) {
         try {
 
             jsonData = jObject.getJSONArray("results");
-            for (int i=0; i<10; ++i) {
+            for (int i = 0; i < 10; ++i) {
 
                 JSONObject itemObj = jsonData.getJSONObject(i);
 
+                // Get name and release date of movies from json file
                 String name = itemObj.getString("original_title");
                 String date = itemObj.getString("release_date");
 
+                // Adding each movie to the list
                 Movie movie = new Movie(name, date);
                 viewItems.add(movie);
             }
@@ -113,44 +111,39 @@ public class AtYourServiceActivity extends AppCompatActivity  {
         }
     }
 
-
-
-
-    /////////////////////////////////////////////////////////////////////////////////
-    private class ListWebServiceTask extends AsyncTask<String, Integer, JSONObject>{
-
+    private class ListWebServiceTask extends AsyncTask<String, Integer, JSONObject> {
 
         @Override
-        protected void onProgressUpdate(Integer... values){
-
+        protected void onProgressUpdate(Integer... values) {
             Log.i(TAG, "Making Progress");
-
         }
-        @Override
-        protected JSONObject doInBackground(String... params) {;
 
-//            JSONObject jObject = new JSONObject();
+        @Override
+        protected JSONObject doInBackground(String... params) {
+            ;
+
             try {
                 URL url = new URL(params[0]);
                 String resp = NetworkUtil.httpResponse(url);
                 jObject = new JSONObject(resp);
                 return jObject;
             } catch (MalformedURLException e) {
-                Log.e(TAG,"MalformedURLException");
+                Log.e(TAG, "MalformedURLException");
                 e.printStackTrace();
             } catch (ProtocolException e) {
-                Log.e(TAG,"ProtocolException");
+                Log.e(TAG, "ProtocolException");
                 e.printStackTrace();
             } catch (IOException e) {
-                Log.e(TAG,"IOException");
+                Log.e(TAG, "IOException");
                 e.printStackTrace();
             } catch (JSONException e) {
-                Log.e(TAG,"JSONException");
+                Log.e(TAG, "JSONException");
                 e.printStackTrace();
             }
 
             return jObject;
         }
+
         @Override
         protected void onPostExecute(JSONObject jObject) {
             super.onPostExecute(jObject);
@@ -164,8 +157,7 @@ public class AtYourServiceActivity extends AppCompatActivity  {
         }
     }
 
-
-    public void callWebserviceButtonHandler(View view){
+    public void callWebserviceButtonHandler(View view) {
         ListWebServiceTask task = new ListWebServiceTask();
         System.out.println("choice is: " + choice);
         try {
@@ -173,9 +165,7 @@ public class AtYourServiceActivity extends AppCompatActivity  {
             task.execute(url);
 
         } catch (NetworkUtil.MyException e) {
-            Toast.makeText(getApplication(),e.toString(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplication(), e.toString(), Toast.LENGTH_SHORT).show();
         }
     }
-
-
 }
