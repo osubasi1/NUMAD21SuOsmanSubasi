@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 public class LocationActivity extends AppCompatActivity implements LocationListener {
 
+
     LocationManager locationManager;
     private TextView latitudeValue;
     private TextView longitudeValue;

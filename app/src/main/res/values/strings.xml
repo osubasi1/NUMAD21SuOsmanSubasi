@@ -29,4 +29,14 @@
     <string name="longLabel">Logitude:</string>
     <string name="latLabel">Latitude:</string>
 
+    <string name="submitBtn">submit</string>
+    <string name="infoText">To see movies and their release date, please select an option</string>
+    <string name="atYourServiceBtn">At Your Service</string>
+    <string-array name="movie_choices">
+        <item>Now Playing</item>
+        <item>Popular</item>
+        <item>Upcoming</item>
+    </string-array>
+
+
 </resources>
