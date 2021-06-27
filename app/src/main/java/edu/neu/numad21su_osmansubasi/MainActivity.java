@@ -59,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button atYourServiceBtn = findViewById(R.id.atYourServiceBtn);
+        atYourServiceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent atYourServiceIntent = new Intent(getApplicationContext(),
+                        AtYourServiceActivity.class);
+                startActivity(atYourServiceIntent);
+            }
+        });
     }
 
 
